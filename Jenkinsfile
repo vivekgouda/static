@@ -12,7 +12,7 @@ pipeline {
         }
         stage('Upload to AWS') {
             steps {
-                withAWS(region:'us-west-2', credentials:'jenkins') {
+                withAWS(region:'us-west-2', credentials:'078563032339') {
                     s3Upload(pathStyleAccessEnabled:true, payloadSigningEnabled: true, file:'index.html', bucket:'jenkins-vivz')
             }
         }
